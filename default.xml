@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-	<default sync-j="4" revision="refs/heads/master"/>
+	<default sync-j="4" revision="rocko"/>
 	<remote name="yocto" fetch="https://git.yoctoproject.org/git"/>
 	<remote name="oe" fetch="https://github.com/openembedded"/>
-	<project name="poky" remote="yocto" revision="pyro" path="poky"/>
-	<project name="meta-openembedded" remote="oe" revision="pyro" path="meta-openembedded"/>
+	<remote name="odroid" fetch="https://github.com/Basharatmartin"/>
+	<remote name="browser" fetch="https://github.com/OSSystems"/>
+	<remote name="iotcloud" fetch="https://github.com/intel-iot-devkit"/>
+	<remote name="bc" fetch="git://git.linphone.org"/>
+	<remote name="nodejs" fetch="https://github.com/imyller"/>
+	
+	<project remote="yocto" revision="rocko" name="poky" path="poky"/>
+	
+	<project remote="oe" revision="rocko" name="meta-openembedded" path="poky/meta-openembedded"/>
+	
+	<project remote="odroid" revision="master" name="meta-odroid" path="poky/meta-odroid"/>
+	
 </manifest>
+
